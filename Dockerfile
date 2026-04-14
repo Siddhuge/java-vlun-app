@@ -1,5 +1,6 @@
-FROM openjdk:8
+FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && \
+    apt-get install -y openssl=1.1.1 curl=7.58.0
 
-CMD ["java", "-version"]
+CMD ["bash"]
